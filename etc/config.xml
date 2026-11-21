@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <accessiguard>
+            <general>
+                <enabled>1</enabled>
+                <position>bottom-right</position>
+                <accent_color>#2563eb</accent_color>
+                <show_powered_by>0</show_powered_by>
+            </general>
+        </accessiguard>
+    </default>
+</config>

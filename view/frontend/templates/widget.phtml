@@ -1,0 +1,18 @@
+<?php
+/**
+ * Frontend template for AccessiGuard WCAG Accessibility Widget.
+ *
+ * @var \SagunTech\AccessiGuard\Block\Widget $block
+ * @var \Magento\Framework\Escaper|null $escaper
+ */
+if (!$block->isEnabled()) {
+    return;
+}
+
+$scriptUrl = $block->getViewFileUrl('SagunTech_AccessiGuard::js/accessiguard.min.js');
+$escapedUrl = isset($escaper) ? $escaper->escapeUrl($scriptUrl) : $block->escapeUrl($scriptUrl);
+?>
+<script>
+window.AccessiGuardConfig = <?= /* @noEscape */ $block->getWidgetConfigJson() ?>;
+</script>
+<script src="<?= /* @noEscape */ $escapedUrl ?>" defer></script>

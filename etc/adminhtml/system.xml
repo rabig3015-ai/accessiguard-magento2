@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="saguntech" translate="label" sortOrder="400">
+            <label>SagunTech</label>
+        </tab>
+        <section id="accessiguard" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>AccessiGuard Accessibility Widget</label>
+            <tab>saguntech</tab>
+            <resource>SagunTech_AccessiGuard::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Accessibility Widget</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display the AccessiGuard WCAG 2.2 AA / ADA / EAA accessibility widget on the storefront.</comment>
+                </field>
+                <field id="position" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Widget Position</label>
+                    <source_model>SagunTech\AccessiGuard\Model\Config\Source\Position</source_model>
+                    <comment>Select the storefront corner for the floating accessibility trigger button.</comment>
+                </field>
+                <field id="accent_color" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accent Color</label>
+                    <comment>Hex color for the trigger button and active toggles (default: #2563eb).</comment>
+                </field>
+                <field id="show_powered_by" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Powered By Footer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Optionally display the AccessiGuard attribution link in the widget footer.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
